@@ -3,22 +3,58 @@ transformarlos a enteros (parseInt),realizar la operación correcta y
 mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
-{	
-	
+{	var numero1;
+    var numero2;
+    var total;
+    
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    numero1 = parseInt(numero1);
+    numero2 = parseInt(numero2);
+
+    total = numero1 + numero2;
+
+    alert("La suma es " + total);
 }
 
 function restar()
 {
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    numero1 = parseInt(numero1);
+    numero2 = parseInt(numero2);
+
+    total = numero1 - numero2;
+
+    alert("La resta es " + total);
 	
 }
 
 function multiplicar()
 { 
-	
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    numero1 = parseInt(numero1);
+    numero2 = parseInt(numero2);
+
+    total = numero1 * numero2;
+
+    alert("La multiplicacion es " + total);
 }
 
 function dividir()
 {
-	
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    numero1 = parseInt(numero1);
+    numero2 = parseInt(numero2);
+
+    total = numero1 / numero2;
+
+    alert("La division es " + total);
 }
 
