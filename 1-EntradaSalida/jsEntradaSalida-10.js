@@ -7,7 +7,6 @@ function mostrarAumento()
     var sueldo;
     var resultado;
     var total;
-    var total2;
 
     sueldo = document.getElementById("importe").value;
 
@@ -15,5 +14,7 @@ function mostrarAumento()
     
     total = (sueldo * 25 / 100);
 
-    resultado = document.getElementById("resultado").value = total;
+    resultado = sueldo - total;
+
+    document.getElementById("resultado").value = resultado
 }
