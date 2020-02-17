@@ -6,7 +6,7 @@ function mostrar()
 	var max;
 
 	min = 1;
-	max = 11
+	max = 11;
 
 	numeroRandom = Math.floor(Math.random() * (max - min))+ min;	
 	alert("Numero entre " + numeroRandom);
