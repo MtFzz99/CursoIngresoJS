@@ -15,15 +15,12 @@ function CalcularPrecio ()
      var descuento;
      var marca;
 
-     precioLampara = 35;
-     cantidad = document.getElementById("Cantidad").value;
-     marca = document.getElementById("Marca").value;
-
-     if(cantidad >= 6){
-         descuento = 0.5;
-    } else if(cantidad == 5 && marca == "ArgentinaLuz"){
-        descuento = 0,4
-    } else if(cantidad == 4){
-        
-    }
+     switch () {
+         case value:
+             
+             break;
+     
+         default:
+             break;
+     }
 }

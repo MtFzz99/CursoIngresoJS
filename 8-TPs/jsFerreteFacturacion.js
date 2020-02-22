@@ -9,22 +9,49 @@ function Sumar ()
     var precio2;
     var precio3;
     var suma;
+
     precio1 = document.getElementById("PrecioUno").value;
     precio2 = document.getElementById("PrecioDos").value;
     precio3 = document.getElementById("PrecioTres").value;
 
-    parseInt(precio1);
-    parseInt(precio2);
-    parseInt(precio3);
+   precio1=  parseInt(precio1);
+    precio2= parseInt(precio2);
+     precio3= parseInt(precio3);
 
-   suma = precio1 + precio2 + precio3;
+    suma = precio1 + precio2 + precio3;
     alert("La suma de los precios es " + suma);
 }
 function Promedio () 
 {
-	
+    var promedio;
+
+	precio1 = document.getElementById("PrecioUno").value;
+    precio2 = document.getElementById("PrecioDos").value;
+    precio3 = document.getElementById("PrecioTres").value;
+
+    precio1=  parseInt(precio1);
+    precio2= parseInt(precio2);
+    precio3= parseInt(precio3);
+    suma = precio1 + precio2 + precio3;
+    promedio = suma /3;
+    alert("El promedio es " + promedio);
+
 }
 function PrecioFinal () 
 {
-	
+    var precioFinal;
+    
+    precio1 = document.getElementById("PrecioUno").value;
+    precio2 = document.getElementById("PrecioDos").value;
+    precio3 = document.getElementById("PrecioTres").value;
+
+    precio1=  parseInt(precio1);
+    precio2= parseInt(precio2);
+    precio3= parseInt(precio3);
+
+    suma = precio1 + precio2 + precio3;
+
+    precioFinal = suma + suma * 21 /100;
+    
+    alert("El precio final es " + precioFinal);
 }
