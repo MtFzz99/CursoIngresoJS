@@ -10,9 +10,9 @@ function sumar()
     numero1 = document.getElementById("numeroUno").value;   
     numero2 = document.getElementById("numeroDos").value;
     numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2)
-
-   total = numero1 + numero2
+    numero2 = parseInt(numero2);
+    
+   total = numero1 + numero2;
 
     alert(" la suma es "+ total);
 }
