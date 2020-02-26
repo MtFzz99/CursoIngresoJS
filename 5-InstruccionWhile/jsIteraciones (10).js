@@ -1,28 +1,69 @@
 function mostrar()
-{
-	var contador;
-	var respuesta;
-	var numeroIngresado;
-	var acumulador;
+{	
+	var respuesta= true;
+	var sumaNegativos = 0;
+	var sumaPositivos = 0;
+	var contadorPositivos = 0;
+	var contadorNegativos = 0;
+	var contadorCeros = 0;
+	var contadorDePares = 0;
+	var promedioDePositivos = 0;
+	var promedioDeNegativos = 0;
+	var diferenciaPositivosYNegativos;
 
-	acumulador=0;
-	contador=0;//inicializar para ingresar
-	respuesta="si"
-	while (respuesta=="si") {//defino la logica
-		contador=contador+1;//cambio la variable de la logica
-		numeroIngresado = prompt("Ingrese el " + contador + " numero :");
-		numeroIngresado = parseInt(numeroIngresado);
-		//while (numeroIngresado>0 && numeroIngresado<9)//mal 	
-		//while (!(numeroIngresado>0 && numeroIngresado<9))//casi bien
-		while (numeroIngresado<0 || numeroIngresado>9) {
-			
+
+	while(respuesta){
+
+		var numero = prompt("ingrese un numero")
+		numero = parseInt(numero);
 		
-			numeroIngresado = prompt("Ingrese el " + contador + " numero :");
-			numeroIngresado = parseInt(numeroIngresado);
-		}
-		acumulador = acumulador + numeroIngresado;
-		respuesta = prompt("si para seguir");
-	}
-	console.log("contador" +contador);
-	console.log("acumulador" +acumulador);
-}//FIN DE LA FUNCIÓN
+		while(isNaN(numero)) {
+			var numero = prompt("ingrese un numero valido"); 
+		    numero = parseInt(numero);
+	    }			
+		
+	        if (numero > 0){
+				//punto 2
+				sumaPositivos += numero;
+                //punto 3
+		        contadorPositivos++;
+
+	        }else if (numero < 0){
+			
+			//punto 1
+		    sumaNegativos += numero;
+			contadorNegativos++;
+
+			}else{
+				//punto 6
+				contadorCeros++;
+            }
+			if (numero % 2 == 0){
+				contadorDePares++;
+			}
+     respuesta = confirm("¿Desea Continuar?");
+	}//fin while
+
+	//punto 7
+	promedioDePositivos = sumaPositivos / contadorPositivos;
+	console.log(sumaPositivos)
+	console.log(contadorPositivos)
+    console.log(sumaPositivos)
+
+
+   //punto 8
+   promedioDeNegativos = sumaNegativos / contadorNegativos;
+
+   //punto 9
+   diferenciaPositivosYNegativos = sumaPositivos - sumaNegativos;
+
+   document.write("promedio De Positivos: " + promedioDePositivos + "<br>")
+   document.write("promedio De Negativos: " + promedioDeNegativos + "<br>")
+   document.write("diferencia: " + diferenciaPositivosYNegativos + "<br>")
+   document.write("suma de negativos: " + sumaNegativos + "<br>")
+   document.write("suma de positivos: " + sumaPositivos + "<br>")
+   document.write("contador de Positivos: " + contadorPositivos + "<br>")
+   document.write("contador de Negativos: " + contadorNegativos + "<br>")
+   document.write("cantidad de ceros: " + contadorCeros + "<br>")
+   document.write("cantidad de numeros pares: " + contadorDePares + "<br>")
+}
